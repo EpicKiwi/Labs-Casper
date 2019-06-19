@@ -21,6 +21,17 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner">
+        {{#get "pages" limit="1" filter="primary_tag:accueil" as |page| }}
+            {{#page}}
+            <article class="presentation-post-full {{post_class}}">
+                <section class="post-full-content post-discreet">
+                    <div class="post-content">
+                        {{content}}
+                    </div>
+                </section>
+            </article>
+            {{/page}}
+        {{/get}}
 
         <div class="post-feed">
             {{#foreach posts}}

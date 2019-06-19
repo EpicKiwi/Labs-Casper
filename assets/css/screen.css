@@ -92,15 +92,10 @@ body {
 /* ---------------------------------------------------------- */
 
 @media (min-width: 900px) {
-    .home-template .post-feed,
     .tag-template .post-feed,
     .author-template .post-feed {
         margin-top: -70px;
         padding-top: 0;
-    }
-    .home-template .site-nav {
-        position: relative;
-        top: -70px;
     }
 }
 
@@ -679,6 +674,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     max-width: 1040px;
     text-align: center;
 }
+
 @media (max-width: 500px) {
     .post-full-header {
         padding: 14vw 3vw 10vw;
@@ -786,6 +782,22 @@ make sure this only happens on large viewports / desktop-ish devices.
     background: rgba(39,44,49,0.15);
     filter: blur(5px);
     transform: rotate(5deg);
+}
+
+/* Home */
+
+.home-template .post-full-header {
+    padding: 2vw 3vw 2vw;
+}
+
+/* end home */
+
+.post-full-content.post-discreet:before, .post-full-content.post-discreet:after {
+    display: none;
+}
+
+.post-full-content.post-discreet {
+    background: transparent;
 }
 
 .no-image .post-full-content {
